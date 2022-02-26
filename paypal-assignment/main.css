@@ -1,0 +1,540 @@
+@import url(//db.onlinewebfonts.com/c/d3398b63eaca40daee65f5fa3b69402c?family=PayPal+Sans+Small);
+* {
+    text-align: center;
+    font-family: "PayPal Sans Small", sans-serif;
+    letter-spacing: 1.25px;
+    scroll-behavior: smooth;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    margin: 0;
+}
+
+ul {
+    margin-left: -20px;
+}
+
+.ul-1 {
+    text-transform: uppercase;
+    list-style-type: none;
+    font-size: .9em;
+    padding-top: 10px;
+}
+
+.ul-1 a {
+    margin: 0 30px;
+    height: 100%;
+    padding: 16px;
+    border-bottom: 2px solid transparent;
+    color: white;
+}
+
+.ul-1 a:hover {
+    border-bottom: 2px solid white;
+}
+
+.ul-1 span a {
+    padding: 22px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+
+/**************** top navigation ****************/
+
+.top-nav {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-around;
+    height: 70px;
+    border-bottom: solid 1px #ccc;
+    font-weight: 400;
+}
+
+.top-nav .btns-wrap button {
+    border: solid 1px;
+    border-radius: 25px;
+    padding: 10px 15px;
+    margin: 0px;
+    font-size: .7em;
+    background: #ccc;
+}
+
+.top-nav .btns-wrap button:last-child {
+    color: #302d2f;
+}
+
+.top-nav .btns-wrap button:hover {
+    background: #0070ba;
+    color: white;
+}
+
+.top-nav .btns-wrap button:focus {
+    background: #0070ba;
+    color: white;
+}
+
+.top-nav * {
+    cursor: pointer;
+}
+
+.logo {
+    float: left;
+    width: 100px;
+}
+
+.skip-to-content-link {
+    background: #0070ba;
+    height: 30px;
+    padding: 8px;
+    position: absolute;
+    transform: translateY(-400%);
+    transition: transform 0.3s;
+    color: #fff;
+}
+
+.skip-to-content-link:focus {
+    transform: translateY(0%);
+}
+
+
+/**************** banner ****************/
+
+.banner {
+    height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(images/paypal-banner.jpg) center center no-repeat;
+    color: white;
+    font-weight: 200;
+    justify-content: space-between;
+}
+
+.banner p {
+    margin: 30px auto;
+    letter-spacing: 1px;
+    font-size: .85em;
+    width: 90%;
+}
+
+.banner-text {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.banner h1 {
+    font-size: 3em;
+    font-weight: 200;
+}
+
+.banner h2 {
+    margin: 0;
+    font-weight: 200;
+}
+
+.btns-wrap {
+    padding-bottom: 5px;
+}
+
+.banner-text .btns-wrap {
+    margin: 30px 0;
+}
+
+.banner-text .btns-wrap button,
+.video div,
+.rpt-action {
+    width: 230px;
+    height: 40px;
+    border: 1px solid;
+    margin: 5px;
+    border-radius: 30px;
+}
+
+.banner-text .btns-wrap button:first-child {
+    background: #0070ba;
+    color: white;
+    border-color: #0070ba;
+}
+
+.banner-text .btns-wrap button:first-child:hover {
+    background: #026aaf;
+    border-color: #026aaf;
+    cursor: pointer;
+}
+
+.banner-text .btns-wrap button:last-child:hover {
+    background: #0070ba;
+    cursor: pointer;
+    color: white;
+    border: #0070ba;
+}
+
+.howBtn {
+    width: 210px;
+    height: 40px;
+    border: 1px solid;
+    margin: 5px;
+    border-radius: 30px;
+    color: black;
+    font-weight: 600;
+    transition: background 0.3s ease-in-out;
+}
+
+.howBtn:hover,
+.howBtn:focus {
+    background: #0070ba;
+    cursor: pointer;
+    color: white;
+}
+
+.flex a {
+    text-decoration: none;
+    padding-top: 15px;
+}
+
+
+/**************** parent video ****************/
+
+.video {
+    height: 285px;
+    width: 100%;
+    margin: 0 auto;
+    font-weight: 200;
+}
+
+.video h2 {
+    width: 56%;
+    font-size: 1.8em;
+    font-weight: 200;
+}
+
+.video div,
+.rpt-action {
+    width: 150px;
+}
+
+.rpt-action:hover {
+    background: #0070ba;
+    color: white;
+    border-color: #0070ba;
+    cursor: pointer;
+}
+
+
+/**************** PayPal guide ***************/
+
+.guide {
+    background: #fff4dc;
+    letter-spacing: 1px;
+    font-size: .9em;
+}
+
+.guide p {
+    letter-spacing: 1px;
+}
+
+.guide .primary {
+    margin: 0px 0;
+}
+
+.guide .primary p {
+    width: 247px;
+    margin: 0;
+}
+
+.guide .primary .circled {
+    border: solid 1px #ccc;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    cursor: not-allowed;
+}
+
+.guide .tertiary {
+    margin: 45px 0;
+}
+
+.guide .tertiary .rpt-action {
+    background: #0070ba;
+    color: white;
+}
+
+.guide .tertiary a {
+    color: #0070ba;
+    margin: 0;
+}
+
+
+/**************** empty div ****************/
+
+.empty-div {
+    height: 400px;
+    width: 100%;
+    background: #ffffff;
+}
+
+
+/**************** information ****************/
+
+.info {
+    background: #009add;
+    min-height: 450px;
+    background: #0070ba;
+    font-weight: 200;
+    margin-top: 80px;
+}
+
+.info img {
+    width: 900px;
+    margin-top: -400px;
+}
+
+.info h1 {
+    font-size: 2.5em;
+    font-weight: 200;
+}
+
+.info p {
+    font-size: .9em;
+    margin: 0;
+    text-align: left;
+    line-height: 22px;
+}
+
+.info h1,
+.info p,
+.info span {
+    color: white;
+}
+
+.info .primary {
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.info .secondary {
+    height: 90px;
+    width: 340px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.info .secondary span {
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+
+/**************** business ****************/
+
+.business {
+    font-weight: 300;
+}
+
+.business .primary {
+    height: 420px;
+    width: 100%;
+    background: white;
+}
+
+.business .primary h1 {
+    font-size: 2.75em;
+    font-weight: 200;
+}
+
+.business button {
+    width: 300px;
+    color: #000000;
+    transition: background 0.3s ease-in-out;
+}
+
+.business button:hover,
+.business button:focus {
+    background: #0070ba;
+}
+
+.business .secondary {
+    height: 290px;
+    width: 100%;
+    background: #f7f9fa;
+}
+
+.business .secondary h1 {
+    font-size: 1.75em;
+    font-weight: 200;
+}
+
+.business .secondary button {
+    background: #0070ba;
+    color: white;
+}
+
+
+/**************** footer ****************/
+
+footer {
+    color: #2d2f30;
+}
+
+footer img {
+    width: 30px;
+}
+
+.ul-2,
+.ul-3,
+.ul-4 {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.ul-2 a:hover,
+.ul-3 a:hover,
+.ul-4 a:hover {
+    text-decoration: underline;
+}
+
+.ul-2 a:focus,
+.ul-3 a:focus,
+.ul-4 a:focus {
+    text-decoration: underline;
+    color: #0070ba;
+}
+
+.ul-2 a {
+    margin: 0 15px;
+}
+
+.ul-2 i {
+    font-size: 1.3em;
+}
+
+footer {
+    height: 145px;
+}
+
+footer .primary {
+    font-weight: 400;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+    border-bottom: dotted 1px #ccc;
+    color: #767676;
+    font-size: .9em;
+}
+
+footer .primary div a {
+    color: #000000;
+}
+
+footer .secondary {
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+    font-size: .75em;
+    color: #888;
+}
+
+footer .secondary div a {
+    margin: 0 10px;
+    color: black;
+}
+
+@media only screen and (max-width: 1200px) {
+    .ul-1 {
+        font-size: .8em;
+    }
+    .ul-1 a {
+        padding: 5px;
+    }
+    .logo {
+        width: 80px;
+    }
+    .top-nav .btns-wrap {
+        margin-top: 0px;
+    }
+    footer .secondary {
+        font-size: .6em;
+    }
+    .info h1 {
+        font-size: 1.5em;
+        font-weight: 200;
+    }
+    .info p {
+        font-size: .8em;
+    }
+    .info img {
+        margin-top: -200px;
+        width: 600px;
+    }
+    .guide .primary p {
+        width: 447px;
+        padding: 30px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .ul-1 {
+        font-size: .8em;
+        margin-left: -20px;
+    }
+    .ul-1 a {
+        padding: 5px;
+        margin: 1px;
+    }
+    .logo {
+        width: 80px;
+    }
+    .top-nav .btns-wrap button {
+        margin-top: 5px;
+    }
+    footer .secondary {
+        font-size: .6em;
+    }
+    .guide .primary p {
+        width: 247px;
+        padding: 30px;
+    }
+    .info img {
+        margin-top: -150px;
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .ul-1 {
+        display: none;
+    }
+    .banner h1,
+    .banner h2 {
+        font-size: 1em;
+    }
+    .video h2 {
+        font-size: 1em;
+    }
+}
