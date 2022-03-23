@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>{{header ? header : 'Welcome'}}</h1>
+        <div class="add-item-form">
+            <input type="text" v-model="newItem" size="25" placeholder="Add to ur shopping list!" @keyup.enter="items.push({id:items.length + 1, label: newItem})">
+            <button class="btn btn-primary" @click="items.push({id:items.length + 1, label: newItem})">Add Item</button>
+        </div>
+        <ul>
+            <li v-for="item in items" :key="item.id">{{item.label}}</li>
+        </ul>
+    </div>
+
+    <script>
+        const shoppingList = Vue.createApp({
+            data() {
+                return {
+                    header: 'This is a shopping list',
+                    items: [{
+                        id: 1,
+                        label: "Banana"
+                    }, {
+                        id: 2,
+                        label: "Music"
+                    }, {
+                        id: 3,
+                        label: "Water"
+                    }, ],
+                    newItem: ""
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>
