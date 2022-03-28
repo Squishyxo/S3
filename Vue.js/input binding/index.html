@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Vue Styling</h1>
+    </header>
+    <section id="assignment">
+        <input v-model="userInput" type="text" placeholder="type style1 or style2" />
+        <p :class="textClasses">
+            Style me!
+        </p>
+        <button @click="toggle">Toggle Paragraph</button>
+
+        <input v-model="urColor" type="text" placeholder="Enter any color you like" />
+        <p :style="chosenColor">Style me inline! {{urColor}}</p>
+    </section>
+</body>
+
+</html>
