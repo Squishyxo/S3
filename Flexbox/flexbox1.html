@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox 1</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <header>
+        <h1>Flexbox Training 1</h1>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./flexbox2.html">Training 2</a>
+        </nav>
+    </header>
+    <section id="main">
+        <article id="lft" class="left">
+            <div class="colors">
+                <button onclick="changBgColor1()" class="color color-1">Main Color</button>
+                <button onclick="changBgColor2()" class="color color-2">#8400ff</button>
+                <button onclick="changBgColor3()" class="color color-3">#532134</button>
+                <button onclick="changBgColor4()" class="color color-4">#947997</button>
+                <button onclick="changBgColor5()" class="color color-5">#847448</button>
+                <button onclick="changBgColor6()" class="color color-6">#099867</button>
+                <button onclick="changBgColor7()" class="color color-7">Black</button>
+                <button onclick="changBgColor8()" class="color color-8">White</button>
+                <button class="color color-9"><h6>Pick a bg color</h6><input type="text" id="hexCode" />
+                <input type="color" id="color" /></button>
+            </div>
+        </article>
+        <article class="right">
+            <div class="flex-side">
+                <a href=""><img src="./instagram-.png" alt="insta" width="30px"></a>
+                <a href=""><img src="./facebook-.png" alt="facebook" width="30px"></a>
+                <a href=""><img src="./twitter.png" alt="facebook" width="30px"></a>
+                <a href=""><img src="./linkedin.png" alt="facebook" width="30px"></a>
+            </div>
+        </article>
+    </section>
+    <script src="./index.js"></script>
+</body>
+
+</html>

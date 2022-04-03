@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #42B983;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-y: hidden;
+}
+
+.main {
+    display: flex;
+    text-align: center;
+    font-size: 5rem;
+    flex-direction: row-reverse;
+    height: 100vh;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 10em;
+    box-shadow: 0 0 10px #42B983;
+    overflow: hidden;
+    padding: 1em;
+    background-color: #1A1A1A;
+    justify-content: center;
+    color: white;
+    transition: flex-basis 800ms ease-in-out;
+    cursor: pointer;
+}
+
+.option:hover {
+    flex-basis: 20em;
+    color: #42B983;
+}
+
+.option a {
+    text-decoration: none;
+    color: white;
+}
+
+.option a:hover {
+    color: #42B983;
+}
+
+@media (min-width: 600px) {
+    .main {
+        flex-direction: row;
+    }
+    .option {
+        flex-shrink: 1;
+    }
+}

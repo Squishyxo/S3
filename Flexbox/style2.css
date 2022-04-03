@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1A1A1A;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+h1 {
+    text-align: center;
+    padding: 30px;
+}
+
+nav {
+    display: flex;
+    background-color: #42B983;
+    justify-content: center;
+}
+
+nav a {
+    color: #1A1A1A;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav a:hover {
+    background-color: #1A1A1A;
+    color: #42B983;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    height: 82vh;
+}
+
+.left {
+    flex: 95%;
+    background-color: #343e88;
+}
+
+.right {
+    flex: 5%;
+    background-color: #1A1A1A;
+}
+
+.flex-side {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-side a {
+    padding: 10px;
+    margin-top: 10vh;
+    border-radius: 100px;
+}
+
+.flex-side a:hover {
+    background-color: #343e88;
+}
+
+.colors {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    justify-content: center;
+}
+
+.colors>button {
+    padding: 100px;
+    width: 500px;
+    height: 100px;
+    margin: 10px;
+    border: 1px solid #42B983;
+    border-radius: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    nav {
+        flex-direction: column;
+    }
+}
