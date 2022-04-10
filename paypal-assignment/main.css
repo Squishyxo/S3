@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #fff;
+    --secondary-color: black;
+    --third-color: #0070ba;
+    --fourth-color: #026aaf;
+}
+
 * {
     text-align: center;
     font-family: sans-serif;
@@ -17,10 +24,12 @@ body {
     overflow-y: auto;
     width: 100%;
     margin: 0;
+    background-color: var(--primary-color);
 }
 
 p {
     font-size: 1rem!important;
+    color: var(--secondary-color);
 }
 
 ul {
@@ -67,6 +76,25 @@ ul {
 
 .wrap {
     flex-wrap: wrap;
+}
+
+#dark-mode {
+    position: absolute;
+    z-index: 3;
+    top: 30px;
+    right: 50px;
+    border: 3px solid black;
+    background-color: #fff;
+}
+
+#light-mode {
+    position: absolute;
+    z-index: 3;
+    top: 30px;
+    right: 50px;
+    display: none;
+    border: 3px solid black;
+    background-color: #000000;
 }
 
 
@@ -125,6 +153,77 @@ ul {
 
 .skip-to-content-link:focus {
     transform: translateY(0%);
+}
+
+.btn {
+    position: relative;
+    z-index: 6;
+    display: none;
+    width: 45px;
+    height: 10px;
+}
+
+.btn span {
+    width: 25px;
+    height: 3px;
+    background: rgb(0, 0, 0);
+    display: flex;
+    position: absolute;
+    transition: .3s;
+}
+
+.btn span:nth-child(1) {
+    top: 20%;
+}
+
+.btn span:nth-child(2) {
+    top: 100%;
+}
+
+.btn span:nth-child(3) {
+    top: 60%;
+}
+
+.btn.is-active span {
+    background: rgb(0, 0, 0);
+}
+
+.btn.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+.btn.active span:nth-child(2) {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.btn.active span:nth-child(3) {
+    display: none;
+}
+
+#side-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: #0070ba;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100vh;
+    position: fixed;
+    padding-top: 20%;
+    margin-left: -1000px;
+    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#side-bar a {
+    text-decoration: none;
+    padding: 30px;
+    color: #fff;
+}
+
+#side-bar.active {
+    margin-left: 0;
 }
 
 
@@ -207,7 +306,7 @@ ul {
     border: 1px solid;
     margin: 5px;
     border-radius: 30px;
-    color: black;
+    color: var(--secondary-color);
     font-weight: 600;
     transition: background 0.3s ease-in-out;
 }
@@ -216,7 +315,7 @@ ul {
 .howBtn:focus {
     background: #0070ba;
     cursor: pointer;
-    color: white;
+    color: var(--primary-color)
 }
 
 .flex a {
@@ -238,6 +337,7 @@ ul {
     width: 56%;
     font-size: 1.8em;
     font-weight: 200;
+    color: var(--secondary-color);
 }
 
 .video div,
@@ -272,6 +372,7 @@ ul {
 .guide .primary p {
     width: 247px;
     margin: 0;
+    color: black;
 }
 
 .guide .primary .circled {
@@ -368,12 +469,13 @@ ul {
 .business .primary {
     height: 420px;
     width: 100%;
-    background: white;
+    background: var(--primary-color);
 }
 
 .business .primary h1 {
     font-size: 2.75em;
     font-weight: 200;
+    color: var(--secondary-color);
 }
 
 .business button {
@@ -458,7 +560,7 @@ footer .primary {
 }
 
 footer .primary div a {
-    color: #000000;
+    color: var(--secondary-color);
 }
 
 footer .secondary {
@@ -471,7 +573,7 @@ footer .secondary {
 
 footer .secondary div a {
     margin: 0 10px;
-    color: black;
+    color: var(--secondary-color);
 }
 
 footer img {
@@ -561,5 +663,8 @@ footer img {
     }
     .howBtn {
         margin: 10px!important;
+    }
+    .btn {
+        display: flex;
     }
 }
