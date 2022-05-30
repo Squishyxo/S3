@@ -8,6 +8,7 @@
 export default {
   name: 'FindRickButton',
   methods: {
+    // calling functions from the store
     getCharacters() {
       this.$store.commit('getCharacters');
     },

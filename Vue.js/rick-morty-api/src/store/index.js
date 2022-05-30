@@ -12,6 +12,7 @@ export default createStore({
     mutations: {
         getCharacters(state){
             state.characters = [];
+            // I used template literals to dynamically call the api with the number of page that is stored in page variable
             fetch(`https://rickandmortyapi.com/api/character/?page=${state.page}`)
                 .then(response => {
             if (response.ok) {
@@ -26,6 +27,7 @@ export default createStore({
         // If I had to describe mutations as far as I know I would say that they're 
         // basically js functions to change state values.
         findRick(state) {
+            // we can find pickle rick easily by specifying the name in the api
             state.characters = [];
             fetch('https://rickandmortyapi.com/api/character/?name=pickle').then((response) => {
                 if (response.ok) {
@@ -39,6 +41,7 @@ export default createStore({
             });
         },
         increasePageNumber(state){
+            // This function adds one to page variable then fetch the api with that variable value for the page
             state.page++
             state.characters = [];
             fetch(`https://rickandmortyapi.com/api/character/?page=${state.page}`)

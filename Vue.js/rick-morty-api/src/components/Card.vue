@@ -1,13 +1,15 @@
 <template>
   <div>
-    <!-- Empty card to display the name and the image -->
+    <!-- Empty card to display the name and the image and gender-->
     <section id="content">
+      <!-- v-for to loop through all the elements of characters array -->
       <article v-for="(character, index) in characters" :key="index" id="main">
         <p id="name">{{ character.name }}</p>
         <img :src="character.image" />
         <p>{{ character.gender }}</p>
       </article>
     </section>
+    <!-- this button increases the number of the page. Therefore, the content changes -->
     <button class="nextBtn" @click="increasePageNumber">Next Page</button>
   </div>
 </template>
@@ -21,6 +23,7 @@ export default {
     },
   },
   methods: {
+    // Calling functions from the store
     getCharacters() {
       this.$store.commit('getCharacters');
     },
