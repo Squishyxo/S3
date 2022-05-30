@@ -5,23 +5,52 @@ import { createStore } from 'vuex'
 export default createStore({
     state: {
         // useless state i know  
-        rickFound: false
+        rickFound: false,
+        characters: [],
+        page: 1
     },
     mutations: {
+        getCharacters(state){
+            state.characters = [];
+            fetch(`https://rickandmortyapi.com/api/character/?page=${state.page}`)
+                .then(response => {
+            if (response.ok) {
+            return response.json();
+          }
+        })
+        .then(data => {
+          state.characters = data.results;
+          console.log(state.characters);
+        });
+        },
         // If I had to describe mutations as far as I know I would say that they're 
         // basically js functions to change state values.
         findRick(state) {
+            state.characters = [];
             fetch('https://rickandmortyapi.com/api/character/?name=pickle').then((response) => {
                 if (response.ok) {
                     return response.json();
                 }
             }).then((data) => {
-                console.log(data.results[0].name)
+                state.characters = data.results;
                 state.rickFound = true;
+                console.log(state.characters);
                 console.log(state.rickFound);
-                document.getElementById('name').innerHTML = data.results[0].name;
-                document.getElementById('image').src = data.results[0].image;
             });
+        },
+        increasePageNumber(state){
+            state.page++
+            state.characters = [];
+            fetch(`https://rickandmortyapi.com/api/character/?page=${state.page}`)
+                .then(response => {
+            if (response.ok) {
+            return response.json();
+          }
+        })
+        .then(data => {
+          state.characters = data.results;
+          console.log(state.characters);
+        });
         }
     }
 })

@@ -1,9 +1,16 @@
 <template>
-  <router-view></router-view>
+  <FindRickButton />
+  <Card />
 </template>
 
 <script>
+import FindRickButton from '../components/FindRickButton.vue';
+import Card from '../components/Card.vue';
 export default {
+  components: {
+    FindRickButton,
+    Card,
+  },
   name: 'app',
 };
 </script>
