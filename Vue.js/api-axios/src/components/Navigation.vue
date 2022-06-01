@@ -3,7 +3,7 @@
   <nav id="bigNav">
       <ul>
         <router-link to="/"><li>HOME</li></router-link>
-        <router-link to="/api1"><li>API 1</li></router-link>
+        <router-link to="/api"><li>API 1</li></router-link>
       </ul>
   </nav>
   <PhoneNavigation />
